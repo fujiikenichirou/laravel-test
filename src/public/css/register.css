@@ -1,18 +1,34 @@
-.register-form__content {
-    margin: 0 auto;
-    padding: 30px 15px;
-    max-width: 1230px;
+.register__alert--success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.register__alert--danger {
+    padding: 10px 0;
+    border-color: #f5c2c7;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.register__content--item {
+    background-color: rgb(245, 217, 181);
 }
 
 .register-form__heading {
-    margin-bottom: 20px;
+    margin: 0 20px;
     text-align: center;
+    color: rgb(231, 144, 39);
+    font-size: 24px;
 }
 
 .form {
     margin: 0 auto;
-    width: 25%;
+    width: 30%;
+    padding: 5%;
     text-align: center;
+    background-color: #fff;
 }
 
 .form__group {
@@ -33,10 +49,11 @@
     padding: 10px;
     width: 100%;
     height: 40px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+    border: none
+}
 
-    appearance: none;
+.form__input--text input {
+    background-color: #ccc;
 }
 
 .form__button {
@@ -49,7 +66,7 @@
     height: 50px;
     border: none;
     border-radius: 3px;
-    background: #000;
+    background: #760000;
     color: #fff;
     cursor: pointer;
 }

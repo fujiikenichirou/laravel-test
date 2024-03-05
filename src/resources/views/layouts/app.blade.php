@@ -13,21 +13,27 @@
 
 <body>
   <header class="header">
-    <div class="header__inner">
-      <div class="header-utilities">
-        <a class="header__logo" href="/">
-          FashionablyLate
-        </a>
-        <nav>
-          <ul class="header-nav">
-            <li class="header-nav__item">
-              <form>
-                <button class="header-nav__button">login</button>
-              </form>
-            </li>
-          </ul>
-        </nav>
+    <div class="header-utilities">
+      <div class="header__inner">
+        <a class="header__logo" href="/">FashionablyLate</a>
       </div>
+      <nav>
+        <ul class="header-nav">
+            @if (Auth::check())
+          <li class="header-nav__item">
+            <form>
+              <button class="header-nav__button">login</button>
+            </form>
+          </li>
+          <li class="header-nav__item">
+            <form action="/logout" method="post">
+                @csrf
+                <button class="header-nav__button">ログアウト</button>
+            </form>
+          </li>
+          @endif
+        </ul>
+      </nav>
     </div>
   </header>
 
