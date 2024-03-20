@@ -16,16 +16,9 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [AuthController::class, 'index']);
 
-Route::middleware('auth')->group(function () {
-        Route::get('/', [AuthController::class, 'index']);
-    });
 
 Route::get('/register', [RegisterController::class, 'register']);
 
 Route::get('/login', [LoginController::class, 'login']);
-
-Route::post('/register', [AuthController::class, 'register']);
