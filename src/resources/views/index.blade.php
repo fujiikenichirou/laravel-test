@@ -9,7 +9,8 @@
 <body>
 	<div class="contact-form">
 		<p class="contact-logo">Contact</p>
-		<form class="contact-form__inner">
+		<form class="contact-form__inner" action="/confirm" method="post">
+        @csrf
             <div class="username-form">
 			    <label class="username" for="username">お名前</label>
               <div class="username__item">

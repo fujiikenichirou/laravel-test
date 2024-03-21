@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ConfirmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::get('/', [AuthController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'register']);
 
 Route::get('/login', [LoginController::class, 'login']);
+
+Route::get('/confirm', [ConfirmController::class, 'confirm']);
